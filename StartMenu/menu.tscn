@@ -1,0 +1,87 @@
+[gd_scene load_steps=2 format=3 uid="uid://3v8otiprji2w"]
+
+[ext_resource type="FontFile" uid="uid://cyus17btekl7x" path="res://Font/SuperLegendBoy-4w8Y.ttf" id="1_bksal"]
+
+[node name="Menu" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.0
+offset_top = -9.0
+offset_right = 7.0
+offset_bottom = 8.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.00244, 1.00237)
+color = Color(0, 0, 0, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+z_index = 1
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -99.0
+offset_top = -190.0
+offset_right = 109.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1.02848, 1.0843)
+alignment = 1
+
+[node name="StartButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../ExitButton")
+focus_neighbor_bottom = NodePath("../OptionButton")
+focus_next = NodePath("../OptionButton")
+focus_previous = NodePath("../ExitButton")
+mouse_force_pass_scroll_events = false
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_bksal")
+theme_override_font_sizes/font_size = 20
+text = "Start"
+text_direction = 1
+
+[node name="OptionButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../StartButton")
+focus_neighbor_bottom = NodePath("../ExitButton")
+focus_next = NodePath("../ExitButton")
+focus_previous = NodePath("../StartButton")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_bksal")
+theme_override_font_sizes/font_size = 20
+text = "Options"
+
+[node name="ExitButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+focus_neighbor_top = NodePath("../OptionButton")
+focus_neighbor_bottom = NodePath("../StartButton")
+focus_next = NodePath("../StartButton")
+focus_previous = NodePath("../OptionButton")
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("1_bksal")
+theme_override_font_sizes/font_size = 20
+text = "Exit"
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -169.0
+offset_top = 88.0
+offset_right = 180.0
+offset_bottom = 198.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.670588, 0.203922, 1, 1)
+theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("1_bksal")
+theme_override_font_sizes/font_size = 80
+text = "Euphoria"
+horizontal_alignment = 1
+vertical_alignment = 1
