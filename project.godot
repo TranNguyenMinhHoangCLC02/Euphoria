@@ -14,6 +14,10 @@ config/name="Euphoria"
 config/features=PackedStringArray("4.2", "Mobile")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/toast/plugin.cfg")
+
 [input]
 
 left_click={

@@ -5,6 +5,7 @@ extends CharacterBody2D
 var speed = 300
 var click_position = Vector2()
 var target_position = Vector2()
+var isRunMode = false
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -21,5 +22,18 @@ func _physics_process(_delta) -> void:
 			animated_sprite_2d.flip_h = true
 		else:
 			animated_sprite_2d.flip_h = false
-		animated_sprite_2d.play("walk")
+		#animated_sprite_2d.play("walk")
+		_toggle_run()
 		move_and_slide()
+
+func _toggle_run() -> void:
+	if Input.is_key_pressed(KEY_CTRL):
+		isRunMode = true
+	else:
+		isRunMode = false
+	if isRunMode:
+		speed = 800
+		animated_sprite_2d.play("run", 2)
+	else:
+		speed = 300
+		animated_sprite_2d.play("walk")

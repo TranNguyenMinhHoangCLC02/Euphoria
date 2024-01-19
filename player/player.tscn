@@ -41,7 +41,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"walk",
-"speed": 8.0
+"speed": 10.0
 }]
 
 [node name="Player" type="CharacterBody2D"]
@@ -50,4 +50,4 @@ script = ExtResource("1_sjigl")
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_kj7sp")
-animation = &"run"
+animation = &"walk"
