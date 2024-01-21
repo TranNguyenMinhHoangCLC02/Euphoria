@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://3v8otiprji2w"]
+[gd_scene load_steps=3 format=3 uid="uid://3v8otiprji2w"]
 
 [ext_resource type="FontFile" uid="uid://cyus17btekl7x" path="res://Font/SuperLegendBoy-4w8Y.ttf" id="1_bksal"]
+[ext_resource type="Texture2D" uid="uid://be00n7v1bbmhq" path="res://Assets/main_bg.png" id="2_mocka"]
 
 [node name="Menu" type="ColorRect"]
 anchors_preset = 15
@@ -13,7 +14,7 @@ offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 scale = Vector2(1.00244, 1.00237)
-color = Color(0, 0, 0, 1)
+color = Color(0, 0, 0, 0)
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 z_index = 1
@@ -85,3 +86,9 @@ theme_override_font_sizes/font_size = 80
 text = "Euphoria"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Bg" type="Sprite2D" parent="Label"]
+z_index = -1
+position = Vector2(242.578, 245.21)
+scale = Vector2(1, 1)
+texture = ExtResource("2_mocka")
