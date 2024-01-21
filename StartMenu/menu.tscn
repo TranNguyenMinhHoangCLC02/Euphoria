@@ -87,8 +87,12 @@ text = "Euphoria"
 horizontal_alignment = 1
 vertical_alignment = 1
 
-[node name="Bg" type="Sprite2D" parent="Label"]
+[node name="Background" type="TextureRect" parent="."]
 z_index = -1
-position = Vector2(242.578, 245.21)
-scale = Vector2(1, 1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 texture = ExtResource("2_mocka")
