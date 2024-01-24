@@ -37,3 +37,13 @@ func _toggle_run() -> void:
 	else:
 		speed = 300
 		animated_sprite_2d.play("walk")
+
+
+func _on_input_event(viewport, event, shape_idx):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
+			click_position = get_global_mouse_position()
+	elif event is InputEventKey and event.scancode == KEY_CTRL:
+		isRunMode = event.pressed
+		_toggle_run()
+		

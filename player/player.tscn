@@ -51,3 +51,5 @@ script = ExtResource("1_sjigl")
 scale = Vector2(0.75, 0.75)
 sprite_frames = SubResource("SpriteFrames_kj7sp")
 animation = &"walk"
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
