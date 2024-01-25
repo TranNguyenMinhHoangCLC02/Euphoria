@@ -47,3 +47,11 @@ func _on_input_event(viewport, event, shape_idx):
 		isRunMode = event.pressed
 		_toggle_run()
 		
+
+
+func _on_mouse_entered():
+	animated_sprite_2d.modulate = Color(1, 1, 1, 0.8)
+
+
+func _on_mouse_exited():
+	animated_sprite_2d.modulate = Color(1, 1, 1, 1)
